@@ -38,7 +38,7 @@ git add .
 git commit -m "Initial commit"
 
 # Link your local repo to GitHub (replace URL with YOUR repository URL)
-git remote add origin https://github.com/YOUR_USERNAME/utility-app.git
+git remote add origin https://github.com/Thangam2001/utility-app.git
 
 # Push the code
 git push -u origin master
@@ -59,12 +59,10 @@ We will deploy the backend first so we can get the API URL.
     -   **Start Command**: `npm start`
 5.  **Environment Variables**:
     Add the following environment variables in the "Environment" tab (or "Advanced" section):
-    -   `CLIENT_ORIGINS`: `https://your-frontend-app.vercel.app` (You will update this *after* deploying the frontend, for now you can use `*` or leave it empty if you want to test without CORS restriction initially, but `*` is recommended for testing).
+    -   `CLIENT_ORIGINS`: `https://utility-app-3sbn.vercel.app` (You will update this *after* deploying the frontend, for now you can use `*` or leave it empty if you want to test without CORS restriction initially, but `*` is recommended for testing).
     -   `PORT`: `10000` (Render usually sets this, but good to be explicit).
 6.  Click **Create Web Service**.
-7.  Wait for the deployment to finish. Copy the **Service URL** (e.g., `https://visionary-lab-backend.onrender.com`).
-
-## 3. Deploy Frontend (Vercel)
+7.  Wait for the deployment to finish. Copy the **Service URL** (e.g., `https://visionary-lab-backend.onrender.com`).## 3. Deploy Frontend (Vercel)
 
 1.  Log in to **Vercel**.
 2.  Click **Add New...** -> **Project**.
