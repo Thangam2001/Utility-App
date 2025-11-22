@@ -1,0 +1,79 @@
+.text-panel {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--glass-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.text-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.text-panel h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.text-panel-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.text-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--glass-light);
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.text-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text-action:not(:disabled):hover {
+  transform: translateY(-1px);
+  background: var(--glass-medium);
+}
+
+.text-action.ghost {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--border-color) 40%, transparent);
+}
+
+.text-action.ghost:hover {
+  background: var(--glass-light);
+}
+
+.text-panel textarea {
+  width: 100%;
+  min-height: 260px;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border-color) 40%, transparent);
+  padding: 18px;
+  background: color-mix(in srgb, var(--surface-secondary) 45%, transparent);
+  color: var(--text-primary);
+  resize: vertical;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-panel textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+

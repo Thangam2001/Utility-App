@@ -1,0 +1,111 @@
+.resizer-page {
+  display: grid;
+  gap: 32px;
+}
+
+.resizer-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.resizer-input {
+  display: grid;
+  gap: 20px;
+}
+
+.resizer-preview {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border-color) 40%, transparent);
+  background: color-mix(in srgb, var(--surface-secondary) 40%, transparent);
+  max-height: 380px;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.resizer-preview img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.dimension-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.dimension-grid label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.dimension-grid input {
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--border-color) 40%, transparent);
+  padding: 14px 16px;
+  background: color-mix(in srgb, var(--surface-secondary) 45%, transparent);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.dimension-grid input:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.aspect-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.resizer-output {
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .dimension-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .resizer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+
+.file-info-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.file-info-card>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.file-info-card .label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.file-info-card p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+}

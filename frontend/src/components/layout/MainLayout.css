@@ -1,0 +1,23 @@
+.app-shell {
+  min-height: 100vh;
+  background: var(--background-gradient);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 40px 20px 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    padding: 60px 32px 80px;
+  }
+}
+
+

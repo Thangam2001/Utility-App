@@ -1,0 +1,58 @@
+.tool-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 28px;
+  background: var(--glass-strong);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid color-mix(in srgb, var(--border-color) 30%, transparent);
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.tool-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: var(--glass-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.tool-card h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.tool-card p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tool-link {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 14px;
+  padding: 10px 16px;
+  background: color-mix(in srgb, var(--surface-secondary) 40%, transparent);
+  transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.tool-link:hover {
+  color: var(--text-primary);
+  background: var(--glass-medium);
+  transform: translateX(4px);
+}
+
+

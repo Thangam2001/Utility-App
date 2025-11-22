@@ -1,0 +1,31 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background: var(--glass-light);
+  color: var(--text-primary);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: var(--glass-medium);
+}
+
+.theme-toggle:active {
+  transform: scale(0.98);
+}
+
+[data-theme='dark'] .theme-toggle {
+  background: var(--glass-dark);
+  color: #ffffff;
+}
+
+
