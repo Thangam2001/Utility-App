@@ -1,4 +1,5 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
+import fs from 'fs'
 import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
 const pdfParse = require('pdf-parse')
@@ -9,9 +10,18 @@ export const convertDocumentBuffer = async ({ buffer, targetFormat, originalMime
     // TXT to PDF
     if (target === 'pdf') {
         const pdfDoc = await PDFDocument.create()
+
+        // Register fontkit
+        const fontkit = await import('@pdf-lib/fontkit').then(m => m.default)
+        pdfDoc.registerFontkit(fontkit)
+
+        // Load custom font
+        const fontPath = new URL('../assets/fonts/LiberationSans-Regular.ttf', import.meta.url)
+        const fontBytes = await fs.promises.readFile(fontPath)
+        const font = await pdfDoc.embedFont(fontBytes)
+
         const page = pdfDoc.addPage()
         const { width, height } = page.getSize()
-        const font = await pdfDoc.embedFont(StandardFonts.Helvetica)
         const fontSize = 12
         const margin = 50
 
